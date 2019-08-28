@@ -28,8 +28,9 @@ def add_user():
         'image': random_result['picture']['medium'],
         'Address':{
             'street':random_result['location']['street'],
-            'city':random_result['location']['city']}
-        }}    
+            'city':'{} - {}'.format(random_result['location']['city'],random_result['location']['state'])
+        }}
+        }    
     
 
     return jsonify(final_result)
