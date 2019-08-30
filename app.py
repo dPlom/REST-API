@@ -1,6 +1,7 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, abort
 import urllib.request
 import json
+
 
 
 app = Flask(__name__)
@@ -15,10 +16,12 @@ def add_user():
     }
     
     """
+    if 'user_id' not in request.json:
+         abort(400)   
+         
     user_id = request.json['user_id']
     url = 'https://randomuser.me/api/?ud={}'.format(str(user_id))
-    req = urllib.request.Request(url)
-    
+    req = urllib.request.Request(url)    
     r = urllib.request.urlopen(req).read()
     r_user = json.loads(r.decode('utf-8'))
     random_result=r_user['results'][0]
@@ -31,6 +34,7 @@ def add_user():
             'city':'{} - {}'.format(random_result['location']['city'],random_result['location']['state'])
         }}
         }    
+    
     
 
     return jsonify(final_result)
