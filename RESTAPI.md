@@ -1,6 +1,6 @@
 # REST API
 
-This API can recive an *user_id* and return this information. If the *user_id* is missing you'll recive an error.
+This API can recive aa *user_id* and return his information. If the *user_id* is missing you'll receive an error.
 
   - Lastname
   - Firstname
@@ -18,16 +18,20 @@ This API can recive an *user_id* and return this information. If the *user_id* i
 * Flask: *pip install Flask*
 
 ## Running the test
-Make a *json's POST request* that content a *json objet* with an user_id. You can obtain it from randomuser.me
-```https://randomuser.me/api/?ud=%3Cid%3E```
+Make a POST request with a json object that contains a user_id.
 This ID should return:
 ```
-    - Lastname: grimsrud
-    - Firstname: ali
-    - Profile Picture:
-    - Adrees: https://randomuser.me/api/portraits/med/men/18.jpg
-        -Street: viggo hansteens vei 9905
-        -City and State: sykkylven - bergen
+    {
+  "user": {
+    "Address": {
+      "city": "reipå - oslo",
+      "street": "ole jacob brochs gate 1992"
+    },
+    "firstname": "pelle",
+    "image": "https://randomuser.me/api/portraits/med/men/60.jpg",
+    "lastname": "mohammadi"
+  }
+}
 ```
 
 ## Built With
