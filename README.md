@@ -26,9 +26,7 @@ Make a POST request with a json object that contains a user_id.
 
 ```
 {
-
 'user_id':'123'
-
 }
 ```
 
