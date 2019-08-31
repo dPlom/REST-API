@@ -1,6 +1,7 @@
 # REST API
 
-This API can recive aa *user_id* and return his information. If the *user_id* is missing you'll receive an error.
+This API can recive aa *user_id* and return his information. 
+If the *user_id* is missing you'll receive an error.
 
   - Lastname
   - Firstname
@@ -11,14 +12,21 @@ This API can recive aa *user_id* and return his information. If the *user_id* is
 
 ## Requirements
 -Python 3.7.4
+
 -Flask
 
 ## Installation
-* Python: Enter https://www.python.org/downloads/ and download the 3.7.4 version. Run and install it.
+* Python: Enter https://www.python.org/downloads/ and download the 3.7.4 version. 
+  Run and install it.
 * Flask: *pip install Flask*
 
 ## Running the test
 Make a POST request with a json object that contains a user_id.
+
+{
+'user_id':'123'
+}
+
 This ID should return:
 ```
     {
