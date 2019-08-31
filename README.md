@@ -17,6 +17,7 @@ If the *user_id* is missing you'll receive an error.
 
 ## Installation
 * Python: Enter https://www.python.org/downloads/ and download the 3.7.4 version. 
+
   Run and install it.
 * Flask: *pip install Flask*
 
@@ -24,7 +25,9 @@ If the *user_id* is missing you'll receive an error.
 Make a POST request with a json object that contains a user_id.
 
 {
+
 'user_id':'123'
+
 }
 
 This ID should return:
@@ -44,6 +47,7 @@ This ID should return:
 
 ## Built With
 [Eclipse](https://www.eclipse.org)
+
 [Postman](https://www.getpostman.com/)
 
 ## Authors
