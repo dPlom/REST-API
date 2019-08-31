@@ -1,6 +1,6 @@
 # REST API
 
-This API can recive aa *user_id* and return his information. 
+This API can recive a *user_id* and return his information. 
 If the *user_id* is missing you'll receive an error.
 
   - Lastname
@@ -24,15 +24,18 @@ If the *user_id* is missing you'll receive an error.
 ## Running the test
 Make a POST request with a json object that contains a user_id.
 
+```
 {
 
 'user_id':'123'
 
 }
+```
+
 
 This ID should return:
 ```
-    {
+ {
   "user": {
     "Address": {
       "city": "reipå - oslo",
